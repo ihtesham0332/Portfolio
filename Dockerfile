@@ -20,4 +20,4 @@ COPY --chown=user . /app
 EXPOSE 7860
 
 # 7. The command to start your Django server!
-CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:7860"]
+CMD ["sh", "-c", "python manage.py migrate && python manage.py shell -c \"from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.filter(username='ihta').exists() or User.objects.create_superuser('ihta', 'khanihtesham0332@gmail.com', 'password')\" && python manage.py runserver 0.0.0.0:7860"]

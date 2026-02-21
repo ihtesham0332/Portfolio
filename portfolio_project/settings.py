@@ -52,6 +52,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = "portfolio_project.urls"
@@ -143,3 +144,8 @@ EMAIL_HOST_USER = 'khanihtesham0332@gmail.com' # Your email [cite: 3, 58]
 EMAIL_HOST_PASSWORD = 'dbsa tpuv hyac mnla' 
 
 DEFAULT_FROM_EMAIL = 'khanihtesham0332@gmail.com'
+
+
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

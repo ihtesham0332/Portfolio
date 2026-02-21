@@ -25,7 +25,8 @@ SECRET_KEY = "django-insecure-nhw#8zf(1a3tyu26@6bzud2chx9_urvggxpe%&uet*d(@=3p9-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*'] # The star means "allow any host", which is needed for Docker
+ALLOWED_HOSTS = ['*'] 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')# The star means "allow any host", which is needed for Docker
 
 # Add this new line right below ALLOWED_HOSTS so your contact form works securely
 CSRF_TRUSTED_ORIGINS = ['https://*.hf.space']

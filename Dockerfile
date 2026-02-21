@@ -20,4 +20,4 @@ COPY --chown=user . /app
 EXPOSE 7860
 
 # 7. The command to start your Django server!
-CMD ["python", "manage.py", "runserver", "0.0.0.0:7860"]
+CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:7860"]

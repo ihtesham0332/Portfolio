@@ -1,3 +1,4 @@
-db.sqlite3
-media/
-projects/
+#comment This file tells git which files and directories to ignore when committing changes.
+#db.sqlite3
+#media/
+#projects/

@@ -54,7 +54,7 @@ from .models import Education  # Make sure your model is named Education
 
 def education_view(request):
     # This fetches every education record you added in the admin panel
-    items = Education.objects.all().order_by('-id') 
+    items = Education.objects.all().order_by('-degree') 
     return render(request, "education.html", {"education_items": items})
 
 def services_view(request):

@@ -32,6 +32,7 @@ class Education(models.Model):
     duration = models.CharField(max_length=100)
     result_details = models.CharField(max_length=200, help_text="GPA or Marks")
     degree_image = models.ImageField(upload_to='degrees/', blank=True, null=True)
+    
 
     def __str__(self):
         return self.degree
